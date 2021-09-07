@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bungee", cursive;
+    overflow-x: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 250vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 251, 15);
+}
+section::before{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to top,rgb(233, 229, 24),transparent);
+    z-index: 10000;  
+  }
+#text{
+    position: relative;
+    color: #ff0055;
+    font-size: 3em ;
+}
+section img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.sec1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px;
+    height: 100vh;
+    background-size: 600%;
+  background-position: 0 0;
+  box-shadow: inset 0 0 5em rgba(0, 0, 0, 0.5);
+  display: flex;
+    background-image: linear-gradient(to right, #fff349, #34ff89, #efe348, #beff0a, #77ff1d);
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: gradients;
+}
+.sec1::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom,rgb(233, 229, 24),transparent);
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: gradients;
+    z-index: 10000;  
+  }
+  @keyframes gradients{
+    0% {
+      background-position: 0 0;
+    }
+    25% {
+      background-position: 50% 0;
+    }
+    50% {
+      background-position: 90% 0;
+    }
+    60% {
+      background-position: 60%;
+    }
+    75% {
+      background-position: 40%;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+#click{
+    position: absolute;
+    height: 190px;
+    width: 200px;
+    margin-bottom: 100px;
+}
+.message__btn {
+    background-color: #ff6b6b;
+    font-size: 1.2em;
+    width: 12%;
+    height: 20%;
+    border-radius: 50%;
+    transition: all 0.2s cubic-bezier(0.55, 0.41, 0.37, 1.41);
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    letter-spacing: 2px;
+    z-index: 2;
+    border: 2px solid #cc444b;
+    box-shadow: 0px 8px 0px -2px #e63946, 0px 8px 0px 0px #cc444b;
+  }
+  .message__btn:hover {
+    transform: scale(0.8);
+    box-shadow: 0px 0px 0px -2px #e63946, 0px 0px 0px 0px #cc444b;
+  }
+  
